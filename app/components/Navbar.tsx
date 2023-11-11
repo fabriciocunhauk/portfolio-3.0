@@ -9,7 +9,9 @@ export default function Navbar() {
     <header>
       <nav className="w-full h-32 py-20 text-white">
         <Container className="flex items-center justify-between">
-          <Image className="w-28 h-28" src={BrainLogo} alt="brain logo" />
+          <Link href="/">
+            <Image className="w-28 h-28" src={BrainLogo} alt="brain logo" />
+          </Link>
           <div>
             <ul className="flex items-center gap-10">
               <li>
