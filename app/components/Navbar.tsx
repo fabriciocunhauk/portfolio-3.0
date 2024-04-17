@@ -1,33 +1,72 @@
 import React from "react";
-import Container from "@/app/components/Container";
-import BrainLogo from "@/public/images/fabricio-cunha-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import Container from "./Container";
+import MobileMenu from "./navbar/MobileMenu";
+import { classNames } from "@/utils/appearence";
+import BrainLogo from "@/public/images/fabricio-cunha-logo.svg";
 
-export default function Navbar() {
+type NavbarProps = {
+  classes?: {
+    wrapper?: string;
+    container?: string;
+    button?: string;
+  };
+};
+
+type NavigationProps = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+function Navbar({ classes }: NavbarProps) {
+  const navigation = [
+    {
+      id: 1,
+      title: "Home",
+      link: "/home",
+    },
+    {
+      id: 2,
+      title: "About",
+      link: "/about",
+    },
+    {
+      id: 3,
+      title: "Projects",
+      link: "/projects",
+    },
+  ];
+
   return (
-    <header>
-      <nav className="w-full h-32 py-20 text-white">
-        <Container className="flex items-center justify-between">
-          <Link href="/">
-            <Image className="w-28 h-28" src={BrainLogo} alt="brain logo" />
-          </Link>
-          <div>
-            <ul className="flex items-center gap-10">
-              <li>
-                <Link href="/">HOME</Link>
-              </li>
-              <li>
-                <Link href="/projects">PROJECTS</Link>
-              </li>
-              <li>
-                <Link href="/about-me">ABOUT ME</Link>
-              </li>
-            </ul>
-          </div>
-          <div>Socials</div>
-        </Container>
-      </nav>
+    <header className={classNames("shadow-md text-white", classes?.wrapper)}>
+      <Container
+        element="nav"
+        classes={{
+          container: classNames(
+            "flex items-center justify-between w-full h-24",
+            classes?.container
+          ),
+        }}
+      >
+        <Link href="/">
+          <Image className="w-28 h-28" src={BrainLogo} alt="brain logo" />
+        </Link>
+        <ul className="hidden xl:flex items-center text-lg font-semibold justify-between gap-10">
+          {navigation.map(({ id, title, link }: NavigationProps) => {
+            return (
+              <Link key={id} href={link} className="hover:border-b-2 h-10 pb-4">
+                <li>{title}</li>
+              </Link>
+            );
+          })}
+        </ul>
+
+        <MobileMenu navigation={navigation} logo={BrainLogo} />
+      </Container>
     </header>
   );
 }
+
+export default Navbar;
