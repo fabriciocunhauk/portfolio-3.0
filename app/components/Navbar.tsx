@@ -40,7 +40,12 @@ function Navbar({ classes }: NavbarProps) {
   ];
 
   return (
-    <header className={classNames("shadow-md text-white", classes?.wrapper)}>
+    <header
+      className={classNames(
+        "fixed shadow-md text-white z-50 w-full",
+        classes?.wrapper
+      )}
+    >
       <Container
         element="nav"
         classes={{
