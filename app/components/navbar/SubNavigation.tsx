@@ -1,5 +1,5 @@
 "use client";
-import { classNames } from "@/app/utils/appearance";
+import { classNames } from "@/utils/appearence";
 import Link from "next/link";
 import React, { useState } from "react";
 

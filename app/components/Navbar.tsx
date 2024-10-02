@@ -25,26 +25,23 @@ function Navbar({ classes }: NavbarProps) {
     {
       id: 1,
       title: "Home",
-      link: "/home",
+      link: "/",
     },
     {
       id: 2,
       title: "About",
-      link: "/about",
+      link: "/#about",
     },
     {
       id: 3,
       title: "Projects",
-      link: "/projects",
+      link: "/#projects",
     },
   ];
 
   return (
     <header
-      className={classNames(
-        "fixed shadow-md text-white z-50 w-full",
-        classes?.wrapper
-      )}
+      className={classNames("fixed text-white z-20 w-full", classes?.wrapper)}
     >
       <Container
         element="nav"

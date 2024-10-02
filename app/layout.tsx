@@ -1,13 +1,11 @@
+import Image from "next/image";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
-import { classNames } from "@/utils/appearence";
 import Navbar from "./components/Navbar";
+import heroImage from "@/public/images/code-bg.jpg";
+import { classNames } from "@/utils/appearence";
+import "./globals.css";
 
-const inter = Roboto({
-  weight: ["100", "300", "400", "500", "700", "900"],
-  subsets: ["latin"],
-});
+import { robotoMono } from "@/app/fonts/fonts";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -21,9 +19,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames("bg-color-primary", inter.className)}>
-        <Navbar />
-        {children}
+      <body
+        className={classNames(
+          "bg-color-primary relative",
+          robotoMono.className
+        )}
+      >
+        <Image
+          src={heroImage}
+          alt="Motorcycle"
+          className="fixed flex-shrink-0 object-cover"
+        />
+        <div className="absolute">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

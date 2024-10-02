@@ -1,18 +1,20 @@
+import { ReactNode, ElementType } from "react";
 import { classNames } from "@/utils/appearence";
-import { ReactNode } from "react";
 
 type ContainerProps = {
+  id?: string | number;
   children: ReactNode;
-  element?: keyof JSX.IntrinsicElements;
+  element?: ElementType;
   classes?: { container?: string };
   size?: string;
 };
 
 type SizeMapProps = {
-  [key: string]: string; // Add an index signature to allow any string key
+  [key: string]: string;
 };
 
 export default function Container({
+  id,
   children,
   element: Tag = "div",
   classes,
@@ -31,5 +33,9 @@ export default function Container({
     classes?.container
   );
 
-  return <Tag className={className}>{children}</Tag>;
+  return (
+    <Tag id={id} className={className}>
+      {children}
+    </Tag>
+  );
 }
