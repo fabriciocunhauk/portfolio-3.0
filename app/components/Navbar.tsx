@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import Container from "./Container";
 import MobileMenu from "./navbar/MobileMenu";
 import { classNames } from "@/utils/appearence";
 import BrainLogo from "@/public/images/fabricio-cunha-logo.svg";
+import useScrollPosition from "@/utils/useScrollPosition";
 
 type NavbarProps = {
   classes?: {
@@ -20,28 +22,34 @@ type NavigationProps = {
   link: string;
 };
 
+const navigation = [
+  {
+    id: 1,
+    title: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "About",
+    link: "/#about",
+  },
+  {
+    id: 3,
+    title: "Projects",
+    link: "/#projects",
+  },
+];
+
 function Navbar({ classes }: NavbarProps) {
-  const navigation = [
-    {
-      id: 1,
-      title: "Home",
-      link: "/",
-    },
-    {
-      id: 2,
-      title: "About",
-      link: "/#about",
-    },
-    {
-      id: 3,
-      title: "Projects",
-      link: "/#projects",
-    },
-  ];
+  const activeOnScroll = useScrollPosition(150);
 
   return (
     <header
-      className={classNames("fixed text-white z-20 w-full", classes?.wrapper)}
+      className={classNames(
+        "fixed text-white z-20 w-full transition ease-in-out duration-300",
+        activeOnScroll && "bg-zinc-800/50",
+        classes?.wrapper
+      )}
     >
       <Container
         element="nav"
