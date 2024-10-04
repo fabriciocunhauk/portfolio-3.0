@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  @apply cursor-pointer;
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */

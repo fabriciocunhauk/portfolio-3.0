@@ -6,6 +6,7 @@ import { classNames } from "@/utils/appearence";
 import "./globals.css";
 
 import { robotoMono } from "@/app/fonts/fonts";
+import Footer from "./components/Footet";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -28,11 +29,12 @@ export default function RootLayout({
         <Image
           src={heroImage}
           alt="Motorcycle"
-          className="fixed flex-shrink-0 object-cover"
+          className="fixed flex-shrink-0 object-cover h-screen"
         />
         <div className="absolute">
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

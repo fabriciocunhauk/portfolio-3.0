@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useScrollPosition from "@/utils/useScrollPosition";
 import Container from "./Container";
 import MobileMenu from "./navbar/MobileMenu";
-import { classNames } from "@/utils/appearence";
 import BrainLogo from "@/public/images/fabricio-cunha-logo.svg";
-import useScrollPosition from "@/utils/useScrollPosition";
+import { classNames } from "@/utils/appearence";
 
 type NavbarProps = {
   classes?: {
@@ -66,7 +66,7 @@ function Navbar({ classes }: NavbarProps) {
         <ul className="hidden xl:flex items-center text-lg font-semibold justify-between gap-10">
           {navigation.map(({ id, title, link }: NavigationProps) => {
             return (
-              <Link key={id} href={link} className="hover:border-b-2 h-10 pb-4">
+              <Link key={id} href={link} className="hover:border-b-2 h-8 pb-4">
                 <li>{title}</li>
               </Link>
             );
