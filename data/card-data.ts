@@ -18,7 +18,7 @@ const cardUrls = [
         id: 3,
         name: "E-Comerce",
         imgURL: "https://github.com/fabriciocunhauk/React-crown-clothing/raw/master/src/assets/Readme%20img.png",
-        link: "https://react-crown-clothing-ecommerce.herokuapp.com/",
+        link: "https://crown-clothing-woad-omega.vercel.app/",
         github: "https://github.com/fabriciocunhauk/React-crown-clothing"
 
     }, 

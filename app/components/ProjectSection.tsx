@@ -23,9 +23,11 @@ const ProjectSections = () => {
           return (
             <Card
               key={card.id}
-              classes={{ card: "w-full text-xl overflow-hidden p-0" }}
+              classes={{
+                card: "w-full text-xl overflow-hidden p-0 rounded-md",
+              }}
             >
-              <div>
+              <div className="overflow-hidden">
                 <Image
                   className="flex-shrink-0 object-cover h-48 hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear"
                   width={400}
@@ -41,7 +43,7 @@ const ProjectSections = () => {
                   {card.link ? (
                     <a
                       href={card.link}
-                      className="flex items-center gap-2 bg-zinc-300 p-2 hover:bg-zinc-200"
+                      className="flex items-center gap-2 bg-zinc-300 p-2 px-4 hover:bg-zinc-200 rounded-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -50,7 +52,7 @@ const ProjectSections = () => {
                   ) : null}
                   <a
                     href={card.github}
-                    className="flex items-center gap-2 bg-zinc-300 p-2 hover:bg-zinc-200"
+                    className="flex items-center gap-2 bg-zinc-300 p-2 px-4 hover:bg-zinc-200 rounded-md"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
