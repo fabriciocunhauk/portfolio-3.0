@@ -2,7 +2,7 @@
 import React from "react";
 import Container from "./Container";
 
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
   return (
@@ -12,18 +12,29 @@ function Hero() {
     >
       <Container
         classes={{
-          container:
-            "absolute flex flex-col text-center z-10 text-white text-5xl",
+          container: "absolute flex flex-col text-center z-10 text-white",
         }}
         element="section"
       >
-        <h1>
+        <h1 className="text-5xl">
           Hi,
-          <Typical wrapper="b" steps={[2000, " I'm Fabricio Cunha"]} />
+          <TypeAnimation
+            sequence={["I'm Fabricio Cunha"]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "1em", display: "inline-block" }}
+            repeat={1}
+          />
         </h1>
-        <p>
-          <Typical wrapper="b" steps={[3000, "A Frontend Developer 👨🏻‍💻"]} />
-        </p>
+        <h2 className="text-4xl">
+          <TypeAnimation
+            sequence={[1000, "A Frontend Developer"]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "1em", display: "inline-block" }}
+            repeat={1}
+          />
+        </h2>
       </Container>
     </div>
   );
