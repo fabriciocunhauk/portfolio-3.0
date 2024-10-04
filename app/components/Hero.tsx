@@ -16,19 +16,19 @@ function Hero() {
         }}
         element="section"
       >
-        <h1 className="text-5xl">
+        <h1 className="text-3xl sm:text-5xl">
           Hi,
           <TypeAnimation
-            sequence={["I'm Fabricio Cunha"]}
+            sequence={[1000, "I'm Fabricio Cunha"]}
             wrapper="span"
             speed={50}
             style={{ fontSize: "1em", display: "inline-block" }}
             repeat={1}
           />
         </h1>
-        <h2 className="text-4xl">
+        <h2 className="text-2xl sm:text-4xl">
           <TypeAnimation
-            sequence={[1000, "A Frontend Developer"]}
+            sequence={[2000, "A Frontend Developer"]}
             wrapper="span"
             speed={50}
             style={{ fontSize: "1em", display: "inline-block" }}
