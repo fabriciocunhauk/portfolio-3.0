@@ -42,7 +42,11 @@ function Footer() {
       >
         <div className="flex flex-col">
           <Link href="/" className="mx-auto sm:m-0 w-28">
-            <Image className="w-28" src={BrainLogo} alt="brain logo" />
+            <Image
+              className="w-28 sm:-ml-4 ml-0"
+              src={BrainLogo}
+              alt="brain logo"
+            />
           </Link>
           <ul className="flex items-center justify-between gap-6">
             {navigation.map(({ id, title, link }: NavigationProps) => {
