@@ -27,7 +27,7 @@ const cardUrls = [
         name: "Interflix",
         imgURL:
             "https://github.com/fabriciocunhauk/React.js-interflix/raw/master/src/assets/imagens/Front-photo.PNG",
-        link: "https://react-js-interflix.vercel.app/",
+        link: "https://interflix.vercel.app/",
         github: "https://github.com/fabriciocunhauk/React.js-interflix"
     },
     {
