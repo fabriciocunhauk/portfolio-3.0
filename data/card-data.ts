@@ -1,8 +1,10 @@
+import smartlist from '../public/images/smartlist_desktop_screenshot.png'
+
 const cardUrls = [
     {
         id: 1,
         name: "SmartList",
-        imgURL: "https://github.com/fabriciocunhauk/smartlist/raw/main/public/screenshots/desktop_screenshot.png",
+        imgURL: smartlist,
         link: "https://www.smart-list.co.uk/",
         github: "https://github.com/fabriciocunhauk/smartlist"
 

@@ -24,12 +24,12 @@ const ProjectSections = () => {
             <Card
               key={card.id}
               classes={{
-                card: "w-full text-xl overflow-hidden p-0 rounded-md",
+                card: "flex flex-col justify-between w-full text-xl overflow-hidden p-0 rounded-md",
               }}
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden max-h-max">
                 <Image
-                  className="flex-shrink-0 object-cover h-48 hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear"
+                  className="flex-shrink-0 object-cover hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear"
                   width={400}
                   height={200}
                   src={card.imgURL}
