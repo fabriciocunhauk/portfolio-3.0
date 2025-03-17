@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import heroImage from "@/public/images/code-bg.jpg";
 import { classNames } from "@/utils/appearence";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 import { robotoMono } from "@/app/fonts/fonts";
@@ -36,6 +37,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );

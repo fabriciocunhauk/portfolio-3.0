@@ -24,7 +24,7 @@ function RevolvingIcons() {
           ))}
         </div>
       </div>
-      <div className="animate-loop-scroll" area-hidden={true}>
+      <div className="animate-loop-scroll" area-hidden="true">
         <div className="flex items-center w-full lg:w-screen h-20 justify-between gap-20 px-20 py-4 overflow-hidden">
           {mySvgData.map((svgLink) => (
             <a
