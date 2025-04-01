@@ -51,7 +51,7 @@ const Description = ({ skillAnimation }: { skillAnimation: boolean }) => {
         <strong className="text-green-primary">Fabricio Cunha</strong>, a{" "}
         <span className="text-blue-600 font-semibold">software engineer</span>{" "}
         who thrives on turning ideas into innovative, user-friendly solutions.
-        With over <span className="font-medium">4+ years of experience</span> in
+        With over <span className="font-medium">4 years of experience</span> in
         the industry, I’ve honed my skills in crafting high-performance web
         applications that deliver exceptional user experiences.
       </p>
