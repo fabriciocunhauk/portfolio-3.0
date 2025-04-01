@@ -30,7 +30,7 @@ const ProjectSections = () => {
             >
               <div className="overflow-hidden h-[250px]">
                 <Image
-                  className="shrink-0 object-cover hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear h-full"
+                  className="shrink-0 object-cover hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear h-full w-full"
                   width={400}
                   height={200}
                   src={card.imgURL}
