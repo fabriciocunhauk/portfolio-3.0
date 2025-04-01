@@ -48,14 +48,6 @@ const cardUrls = [
         github: "https://github.com/fabriciocunhauk/LOOPSTUDIO-LANDING-PAGE"
     },
     {
-        id: 7,
-        name: "Movies Search",
-        imgURL:
-            "https://github.com/fabriciocunhauk/React-Movies-Search/raw/master/src/assets/images/front-page.png",
-        link: "https://react-movies-search-alpha.vercel.app",
-        github: "https://github.com/fabriciocunhauk/React-Movies-Search"
-    },
-    {
         id: 8,
         name: "A touch of angels",
         imgURL: "https://github.com/fabriciocunhauk/a-touch-of-angels/raw/master/assets/images/a%20touch%20of%20angels%20cleaning.PNG",
@@ -71,14 +63,6 @@ const cardUrls = [
         link: "https://fabriciocunhauk.github.io/natours-with-css-and-sass/",
         github: "https://github.com/fabriciocunhauk/natours-with-css-and-sass"
     },
-    // {
-    //     id: 9,
-    //     name: "Be-the-hero",
-    //     imgURL:
-    //         "https://github.com/Rocketseat/semana-omnistack-11/raw/master/.github/bethehero.png",
-    //     link: "https://be-the-hero-oficial.netlify.com/",
-    //     github: "https://github.com/fabriciocunhauk/be-the-hero"
-    // },
     {
         id: 10,
         name: "Proffy",
@@ -87,23 +71,6 @@ const cardUrls = [
         link: "https://nlw-02-proffy.vercel.app/",
         github: "https://github.com/fabriciocunhauk/NLW-02-proffy"
     },
-    {
-        id: 11,
-        name: "Eat smart",
-        imgURL:
-            "https://github.com/fabriciocunhauk/eat-smart-page/raw/master/assets/images/frontpage.jpg",
-        link: "https://fabriciocunhauk.github.io/eat-smart-page",
-        github: "https://github.com/fabriciocunhauk/eat-smart-page"
-
-    },
-    // {
-    //     id: 17,
-    //     name: "Happy",
-    //     imgURL:
-    //         "https://github.com/rocketseat-education/nlw-03-omnistack/raw/master/.github/happy.png",
-    //     link: "https://happy-vert-psi.vercel.app/",
-    //     github: "https://github.com/fabriciocunhauk/happy"
-    // },
 ]
 
 export default cardUrls;
