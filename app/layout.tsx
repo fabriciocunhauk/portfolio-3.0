@@ -22,10 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classNames(
-          "bg-color-primary relative",
-          robotoMono.className
-        )}
+        className={classNames("bg-dark-gray relative", robotoMono.className)}
       >
         <Image
           src={heroImage}

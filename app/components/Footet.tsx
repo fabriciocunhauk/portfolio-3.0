@@ -51,9 +51,14 @@ function Footer() {
           <ul className="flex items-center justify-between gap-6">
             {navigation.map(({ id, title, link }: NavigationProps) => {
               return (
-                <a key={id} href={link} className="hover:border-b-2 h-8 pb-4">
-                  <li>{title}</li>
-                </a>
+                <li key={id}>
+                  <Link
+                    href={link}
+                    className="hover:border-b-2 hover:border-b-green-primary h-8 pb-4"
+                  >
+                    {title}
+                  </Link>
+                </li>
               );
             })}
           </ul>
@@ -66,21 +71,21 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin />
+              <FaLinkedin className="hover:text-green-primary" />
             </Link>
             <Link
               href="https://github.com/fabriciocunhauk"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaSquareGithub />
+              <FaSquareGithub className="hover:text-green-primary" />
             </Link>
             <Link
               href="https://stackoverflow.com/users/13144771/fabricio-cunha"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <PiStackOverflowLogoFill />
+              <PiStackOverflowLogoFill className="hover:text-green-primary" />
             </Link>
           </div>
           <ul className="mt-4">

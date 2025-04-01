@@ -29,7 +29,7 @@ export default function MobileMenu({
         className={classNames(
           "hidden",
           isOpen &&
-            "flex fixed top-0 right-0 bottom-0 left-0 bg-color-primary z-20 w-full h-full overflow-y-scroll"
+            "flex fixed top-0 right-0 bottom-0 left-0 bg-dark-gray z-20 w-full h-full overflow-y-scroll"
         )}
       >
         <Container
@@ -39,11 +39,11 @@ export default function MobileMenu({
         >
           <Button
             classes={{
-              button: "w-10 h-10 bg-transparent",
+              button: "w-10 h-10 bg-transparent mt-3",
             }}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <IoMdClose className="text-4xl" />
+            <IoMdClose className="text-4xl hover:text-green-primary" />
           </Button>
           <Link href="/" className="mx-auto" onClick={() => setIsOpen(!isOpen)}>
             <Image
@@ -58,9 +58,15 @@ export default function MobileMenu({
           <ul className="flex flex-col text-center text-2xl font-semibold gap-10 mx-auto">
             {navigation.map(({ id, title, link }: NavigationProps) => {
               return (
-                <Link key={id} href={link} onClick={() => setIsOpen(!isOpen)}>
-                  <li>{title}</li>
-                </Link>
+                <li key={id}>
+                  <Link
+                    href={link}
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="hover:border-b-2 hover:border-b-green-primary h-8 pb-4"
+                  >
+                    {title}
+                  </Link>
+                </li>
               );
             })}
           </ul>
@@ -69,7 +75,7 @@ export default function MobileMenu({
       <Button
         classes={{
           button:
-            "block xl:hidden bg-transparent hover:bg-red-primary hover:text-white w-8 h-8",
+            "block xl:hidden bg-transparent hover:text-white w-8 h-8 hover:bg-green-primary",
         }}
         onClick={() => setIsOpen(!isOpen)}
       >

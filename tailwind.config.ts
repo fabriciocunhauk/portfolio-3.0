@@ -18,7 +18,8 @@ const config: Config = {
         },
       },
         colors: {
-      'color-primary': '#1C2135',
+        'green-primary': '#41C1BA',
+        'dark-gray': '#1C2135',
     },
     },
   },

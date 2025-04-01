@@ -16,7 +16,7 @@ function Hero() {
         }}
         element="section"
       >
-        <h1 className="text-3xl sm:text-5xl">
+        <h1 className="text-3xl sm:text-6xl">
           Hi,
           <TypeAnimation
             sequence={[1000, "I'm Fabricio Cunha"]}
@@ -26,7 +26,7 @@ function Hero() {
             repeat={1}
           />
         </h1>
-        <h2 className="text-2xl sm:text-4xl">
+        <h2 className="text-2xl sm:text-5xl text-green-primary">
           <TypeAnimation
             sequence={[2000, "A Frontend Developer"]}
             wrapper="span"

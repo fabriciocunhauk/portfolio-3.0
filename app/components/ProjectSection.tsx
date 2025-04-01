@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import Container from "./Container";
+import Button from "./Button";
 
 const ProjectSections = () => {
   return (
@@ -27,9 +28,9 @@ const ProjectSections = () => {
                 card: "flex flex-col justify-between w-full text-xl overflow-hidden p-0 rounded-md",
               }}
             >
-              <div className="overflow-hidden max-h-max">
+              <div className="overflow-hidden h-[250px]">
                 <Image
-                  className="flex-shrink-0 object-cover hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear"
+                  className="shrink-0 object-cover hover:transform hover:scale-125 transition-transform duration-0 hover:duration-[6000ms] ease-linear h-full"
                   width={400}
                   height={200}
                   src={card.imgURL}
@@ -41,23 +42,21 @@ const ProjectSections = () => {
                 <h2>{card.name}</h2>
                 <div className="flex gap-6">
                   {card.link ? (
-                    <a
-                      href={card.link}
-                      className="flex items-center gap-2 bg-zinc-300 p-2 px-4 hover:bg-zinc-200 rounded-md"
+                    <Button
+                      link={card.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Website <TbWorldWww />
-                    </a>
+                    </Button>
                   ) : null}
-                  <a
-                    href={card.github}
-                    className="flex items-center gap-2 bg-zinc-300 p-2 px-4 hover:bg-zinc-200 rounded-md"
+                  <Button
+                    link={card.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     GitHub <FaGithub />
-                  </a>
+                  </Button>
                 </div>
               </div>
             </Card>

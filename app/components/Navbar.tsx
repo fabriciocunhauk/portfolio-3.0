@@ -66,9 +66,14 @@ function Navbar({ classes }: NavbarProps) {
         <ul className="hidden xl:flex items-center text-lg font-semibold justify-between gap-10">
           {navigation.map(({ id, title, link }: NavigationProps) => {
             return (
-              <Link key={id} href={link} className="hover:border-b-2 h-8 pb-4">
-                <li>{title}</li>
-              </Link>
+              <li key={id}>
+                <Link
+                  href={link}
+                  className="hover:border-b-2 hover:border-b-green-primary h-8 pb-4"
+                >
+                  {title}
+                </Link>
+              </li>
             );
           })}
         </ul>
